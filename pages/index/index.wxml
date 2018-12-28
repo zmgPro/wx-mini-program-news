@@ -3,11 +3,11 @@
   <view class="title" >
     <view class='title-td' wx:for="{{title}}">{{item}}</view>
   </view>
-  <view class="news-list">
-    <view class='news-list-title'>第一条新闻</view>
-    <view class="news-list-date">2018.1.1</view>
-    <view class="news-list-source">人民日报</view>
-    <image class="news-list-image" src="/images/test.jpg"></image>
+  <view class="news-list" wx:for="{{newsList}}">
+    <view class='news-list-title'>{{item.title}}</view>
+    <view class="news-list-date">{{item.date}}</view>
+    <view class="news-list-source">{{item.source}}</view>
+    <image class="news-list-image" src="{{item.image}}"></image>
   
   
   
