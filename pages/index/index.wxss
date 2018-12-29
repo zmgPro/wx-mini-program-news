@@ -29,8 +29,6 @@
   flex: 1;
   margin-right:30rpx;
   justify-content: space-between;
-
- 
 }
 .news-list-ps{
   display: flex;
@@ -39,5 +37,19 @@
   opacity: 0.5;
   margin-bottom: 20rpx;
   justify-content: space-between;
-  
+}
+#news-list-0{
+  height: 500rpx;
+  width: 680rpx;
+}
+#news-list-image-0{
+  position: absolute;
+  height: 480rpx;
+  width: 680rpx;
+  z-index: -1;
+}
+#news-list-text-0{
+  color:white;
+  margin-top:350rpx;
+  margin-left: 30rpx;
 }
