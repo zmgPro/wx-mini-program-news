@@ -36,14 +36,23 @@ Page({
   },
   changeTitle(e){
     let result = e.currentTarget.dataset.title
+    console.log(e.currentTarget.dataset)
     let section = titleMap[result]
     this.setData({
       section: section
     })
     this.getNewsList()
   },
+  intoDetail(e){
+    let id = e.currentTarget.dataset.index
+    wx,wx.navigateTo({
+      url: '/pages/detail/detail?id='+id,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   getNewsList(){
-    console.log(this.data.section)
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data:{
@@ -58,13 +67,14 @@ Page({
         let length = result.length
         for (let i =0 ;i<length;i++){
           newsList.push({
+            id:result[i].id,
             title: result[i].title,
             date: result[i].date.substring(11,16),
             source: result[i].source,
             image: result[i].firstImage
           })
         }
-        console.log(result)
+
         this.setData({
           newsList:newsList
         })
