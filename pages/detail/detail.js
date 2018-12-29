@@ -1,7 +1,7 @@
 // pages/detail/detail.js
 Page({
   data: {
-    id:0
+    id: 1523074607642
   },
   onLoad: function (options) {
     this.setData({
@@ -19,7 +19,14 @@ Page({
         'content-type': 'application/json'
       },
       success:res=>{
-        console.log(res)
+        let newsTitle
+        let newsDate
+        let newsSource
+
+        let newsDetail=[]
+        let length = res.data.result.content.length
+        
+        console.log(length)
       }
     })
 

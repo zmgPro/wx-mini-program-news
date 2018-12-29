@@ -1,2 +1,17 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view>
+  <view>this is title</view>
+  <view>来源</view>
+  <view>date</view>
+  <image></image>
+  <view>内容
+  </view>
+
+
+
+
+
+
+
+
+</view>
