@@ -1,1 +1,28 @@
 /* pages/detail/detail.wxss */
+.container{
+margin: 40rpx;
+}
+.title{
+  font-size: 45rpx;
+  line-height: 63rpx;
+
+}
+.source-date{
+  display: flex;
+  opacity: 0.5;
+  justify-content: space-between;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  margin-top: 30rpx;
+}
+.detail{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.8;
+  margin-top:30rpx;
+}
+
+image{
+  height: 400rpx;
+  width:670rpx;
+}

@@ -6,8 +6,8 @@
     <view class='date'>{{date}}</view>
   </view>
   
-  <view wx:for='{{newsDetail}}'>
-    <block wx:if="{{item.type=='p'}}">
+  <view class='detail' wx:for='{{newsDetail}}'>
+    <block class="detail-text" wx:if="{{item.type=='p'}}">
       <view>{{item.content}}</view>
     </block>
     <block wx:elif="{{item.type=='image'}}">
