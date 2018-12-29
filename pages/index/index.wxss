@@ -8,6 +8,36 @@
   line-height: 42rpx;
   font-size: 30rpx;
   margin-right: 40rpx;
-  height: 70rpx;
+  height: 70rpx; 
+}
+.news-list{
+  display: flex;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  margin: 30rpx;
+
+  border-bottom: 1px solid rgb(226, 226, 226)
+}
+.news-list-image{
+  height: 119rpx;
+  width: 180rpx;
+  margin-bottom: 30rpx;
+}
+.news-list-text{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right:30rpx;
+  justify-content: space-between;
+
+ 
+}
+.news-list-ps{
+  display: flex;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  opacity: 0.5;
+  margin-bottom: 20rpx;
+  justify-content: space-between;
   
 }

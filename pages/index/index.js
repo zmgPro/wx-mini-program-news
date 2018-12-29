@@ -38,11 +38,12 @@ Page({
         for (let i =0 ;i<9;i++){
           newsList.push({
             title: result[i].title,
-            date: result[i].date,
+            date: result[i].date.substring(11,16),
             source: result[i].source,
             image: result[i].firstImage
           })
         }
+        console.log(result)
         this.setData({
           newsList:newsList
         })

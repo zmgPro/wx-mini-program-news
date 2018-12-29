@@ -4,9 +4,13 @@
     <view class='title-td' wx:for="{{title}}">{{item}}</view>
   </view>
   <view class="news-list" wx:for="{{newsList}}">
-    <view class='news-list-title'>{{item.title}}</view>
-    <view class="news-list-date">{{item.date}}</view>
-    <view class="news-list-source">{{item.source}}</view>
+    <view class='news-list-text'>
+      <view class='news-list-title'>{{item.title}}</view>
+      <view class='news-list-ps'>
+        <view class="news-list-date">{{item.date}}</view>
+        <view class="news-list-source">{{item.source}}</view>
+      </view>
+    </view>
     <image class="news-list-image" src="{{item.image}}"></image>
   
   
