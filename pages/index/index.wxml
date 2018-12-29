@@ -1,9 +1,10 @@
 <!--index.wxml-->
 <view class="container">
   <view class="title" >
-    <view class='title-td' wx:for="{{title}}">{{item}}</view>
+    <view class='title-td' wx:for="{{title}}" catchtap='changeTitle' data-title='{{item}}'>{{item}}</view>
+    
   </view>
-  <view class="news-list" wx:for="{{newsList}}" id="news-list-{{index}}">
+  <view class="news-list" wx:for="{{newsList}}" id="news-list-{{index}}" >
     <view class='news-list-text'id="news-list-text-{{index}}">
       <view class='news-list-title' >{{item.title}}</view>
       <view class='news-list-ps'>

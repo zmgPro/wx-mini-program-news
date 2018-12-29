@@ -1,4 +1,14 @@
 // pages/content.js
+const titleMap={
+  "国内": 'gn',
+  '国际': 'gj',
+  "财经":'cj',
+  "娱乐":'yl' ,
+  "军事":'js', 
+  "体育":'ty',
+  "其他":'other' 
+}
+
 Page({
 
   /**
@@ -7,6 +17,7 @@ Page({
   data: {
     title:["国内","国际","财经","娱乐","军事","体育","其他"],
     newsList:[],
+    section:"gn"
 
   },
 
@@ -23,11 +34,20 @@ Page({
   onPullDownRefresh: function () {
 
   },
+  changeTitle(e){
+    let result = e.currentTarget.dataset.title
+    let section = titleMap[result]
+    this.setData({
+      section: section
+    })
+    this.getNewsList()
+  },
   getNewsList(){
+    console.log(this.data.section)
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data:{
-        type:'gn'
+        type: this.data.section
       },
       header:{
         'content-type':'application/json'
@@ -35,7 +55,8 @@ Page({
       success: (res) => {
         let newsList=[]
         let result=res.data.result
-        for (let i =0 ;i<9;i++){
+        let length = result.length
+        for (let i =0 ;i<length;i++){
           newsList.push({
             title: result[i].title,
             date: result[i].date.substring(11,16),
@@ -52,8 +73,9 @@ Page({
       fail: res => {
         console.log(res)
       }
-
     })
 
   }
+
+
 })
