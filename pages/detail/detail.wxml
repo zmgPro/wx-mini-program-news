@@ -6,14 +6,15 @@
     <view class='date'>{{date}}</view>
   </view>
   
-  <view class='detail' wx:for='{{newsDetail}}'>
-    <block class="detail-text" wx:if="{{item.type=='p'}}">
-      <view>{{item.content}}</view>
+  <view class='detail' >
+    <block wx:for='{{newsDetail}}'>
+      <block class="detail-text" wx:if="{{item.type=='p'}}">
+        <text>{{item.content}}\n\n</text>
+      </block>
+      <block wx:elif="{{item.type=='image'}}">
+        <image class='' src='{{image}}'></image>
+      </block>
     </block>
-    <block wx:elif="{{item.type=='image'}}">
-      <image class='' src='{{image}}'></image>
-    </block>
-  
   
   
   </view>

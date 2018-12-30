@@ -43,11 +43,13 @@ Page({
     let index = e.currentTarget.dataset.index; 
     //console.log(e.currentTarget.dataset)
     let section = titleMap[result]
-    this.setData({
-      section: section,
-      idx: index   
-    })
-    this.getNewsList()
+    if (section !== this.data.section) {
+      this.setData({
+        section: section,
+        idx: index   
+      })
+      this.getNewsList()
+    }
   },
   intoDetail(e){
     let id = e.currentTarget.dataset.index
