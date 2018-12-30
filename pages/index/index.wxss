@@ -1,3 +1,20 @@
+.nav-bar{
+  display: flex;
+  background-color: #bfefff;
+  height: 160rpx;
+
+}
+.nav-icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 80rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  
+}
+.nav-title{
+  margin-top: 80rpx;
+}
 .title{
   display: flex;
   flex-direction: row;

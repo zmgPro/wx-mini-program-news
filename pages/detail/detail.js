@@ -15,6 +15,9 @@ Page({
     })
     this.getNewsDetail()    
   },
+  onPullDownRefresh: function () {
+      wx.stopPullDownRefresh()
+  },
   getNewsDetail(){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
@@ -55,6 +58,12 @@ Page({
       }
     })
 
+  },
+  back(){
+    wx.navigateBack({
+      url:'/pages/index/index'
+      
+    })
   }
 
 

@@ -1,4 +1,8 @@
 <!--pages/detail/detail.wxml-->
+<view class='nav-bar'>
+  <image source='/images/test.jpg' class='nav-icon' bindtap="back"></image>
+  <view class="nav-title">新闻-快讯</view>
+</view>
 <view class='container'>
   <view class='title'>{{title}}</view>
   <view class='source-date'>
