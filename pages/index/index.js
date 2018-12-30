@@ -33,7 +33,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getNewsList(function () {
+      wx.stopPullDownRefresh()
+    })
+    
   },
   changeTitle(e){
     let result = e.currentTarget.dataset.title
@@ -55,7 +58,7 @@ Page({
       complete: function(res) {},
     })
   },
-  getNewsList(){
+  getNewsList(callback){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data:{
@@ -83,6 +86,9 @@ Page({
         })
         
       },
+      complete: function () {
+        if (callback) { callback() }
+      },    
       fail: res => {
         console.log(res)
       }
