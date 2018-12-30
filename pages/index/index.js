@@ -80,11 +80,11 @@ Page({
             image: result[i].firstImage
           })
         }
-
+        
         this.setData({
           newsList:newsList
         })
-        
+        console.log(this.data.newsList)
       },
       complete: function () {
         if (callback) { callback() }
