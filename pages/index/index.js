@@ -17,7 +17,8 @@ Page({
   data: {
     title:["国内","国际","财经","娱乐","军事","体育","其他"],
     newsList:[],
-    section:"gn"
+    section:"gn",
+    idx: 0
 
   },
 
@@ -36,10 +37,12 @@ Page({
   },
   changeTitle(e){
     let result = e.currentTarget.dataset.title
-    console.log(e.currentTarget.dataset)
+    let index = e.currentTarget.dataset.index; 
+    //console.log(e.currentTarget.dataset)
     let section = titleMap[result]
     this.setData({
-      section: section
+      section: section,
+      idx: index   
     })
     this.getNewsList()
   },
